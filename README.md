@@ -22,9 +22,9 @@ d. Appropriately labels the data set with descriptive variable names.
 
 e. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-# Walk-through for how I collected, worked with, and cleaned this data set
+# Walk-through of how I collected, worked with, and cleaned this data set
 
-## Downloading the Samsung Galaxy S smartphone for this project
+## Download the Samsung Galaxy S smartphone data for this project
 ```{r}
 if(!file.exists("UCI HAR Dataset.zip")){
   temp <- tempfile()
@@ -34,51 +34,51 @@ if(!file.exists("UCI HAR Dataset.zip")){
 }
 ```
 
-## Loading the reshape library we'll be using
+## Load the reshape library we'll be using
 ```{r}
 library(reshape2)
 ```
 
-## Setting up Training data
-### loading the training data sets for this assignment
+## Set up Training data
+### load the training data sets for this assignment
 ```{r}
 training <- read.csv("UCI HAR Dataset/train/X_train.txt", sep = "",header = F)
 ```
-### adding/creating a new column for the y_train data to our training data
+### add/create a new column for the y_train data to our training data
 ```{r}
 training[,562] <- read.csv("UCI HAR Dataset/train/y_train.txt", sep = "",header = F)
 ```
-### adding/creating another column for Subjects to add to our training dataset
+### add/create another column for Subjects to add to our training dataset
 ```{r}
 training[,563] <-read.csv("UCI HAR Dataset/train/subject_train.txt", sep = "",header = F)
 ```
 
-## Setting up Test data
-### loading the test data sets for this assignment
+## Set up Test data
+### load the test data sets for this assignment
 ```{r}
 test <- read.csv("UCI HAR Dataset/test/X_test.txt", sep = "",header = F)
 ```
-### adding/creating a new column for the y_train data to our test data
+### add/create a new column for the y_train data to our test data
 ```{r}
 test[,562] <- read.csv("UCI HAR Dataset/test/y_test.txt", sep = "",header = F)
 ```
-### adding/creating another column for Subjects to add to our test dataset
+### add/create another column for Subjects to add to our test dataset
 ```{r}
 test[,563] <-read.csv("UCI HAR Dataset/test/subject_test.txt", sep = "",header = F)
 ```
 
-## Setting up Activity data
-### loading data for activity labels
+## Set up Activity data
+### load data for activity labels
 ```{r}
 activityLabels <- read.csv("UCI HAR Dataset/activity_labels.txt", sep = "",header = F)
 ```
-### activity names 
+### the activity names 
 ```{r}
 activityLabels[,2] <- as.character(activityLabels[,2])
 ```
 
-## Setting up Feature data
-### loading data for the features
+## Set up Feature data
+### load data for the features
 ```{r}
 features <- read.csv("UCI HAR Dataset/features.txt", sep = "",header = F)
 ```
@@ -86,37 +86,37 @@ features <- read.csv("UCI HAR Dataset/features.txt", sep = "",header = F)
 ```{r}
 features[,2] <- as.character(features[,2])
 ```
-### substituting labels for easier reading
+### substitute labels for easier reading
 ```{r}
 features[,2] <- gsub("-mean","Mean", features[,2])
 features[,2] <- gsub("-std","Std", features[,2])
 features[,2] <- gsub("[-()]","", features[,2])
 ```
 
-## Cleaning and Setting up "new" data
-### merging the training and test sets to create one data set
+## Clean and Set up "new" data
+### merge the "training" and "test" data sets to create one new data set
 ```{r}
 oneData <- rbind(training,test)
 ```
-### setting up for extracting only the measurements for mean and standard deviations
+### set up for the extraction of only the measurements for mean and standard deviations
 ```{r}
 extractedFeatures <- grep(".*Mean.*|.*Std.*", features[,2])
 ```
-### adding the subject and activity columns
+### add the subject and activity columns
 ```{r}
 features <- features[extractedFeatures,]
 extractedFeatures <- c(extractedFeatures, 562,563)
 ```
-## extracting only measurements we want
+## extract only the measurements we want
 ```{r}
 oneData <- oneData[,extractedFeatures]
 ```
-## making column names more readable
+## make column names more readable
 ```{r}
 colnames(oneData) <- c("Subject","Activity", features[,2])
 ```
 
-## making activities and subjects into factors we can work with
+## make activities and subjects into factors we can work with
 ```{r}
 oneData$Activity <- factor(oneData$Activity, levels = activityLabels[,1], labels = activityLabels[,2])
 
@@ -126,13 +126,14 @@ Activity <- oneData$Activity
 Subject <- oneData$Subject
 ```
 
-## creating an independent tidy data set with averages of each variable for each subject
+## create an independent tidy data set with averages of each variable for each subject
 ```{r}
 oneDataMelted <- melt(oneData, id.vars = c("Subject", "Activity"))
 oneDataMeltedMean <- dcast(oneDataMelted, Subject + Activity ~ variable, mean)
 ```
 
-## storing the results in neat "tidy.txt" file
+## store the results in neat text file "tidy.txt"
 ```{r}
 write.table(oneDataMeltedMean, "tidy.txt", row.names = F, quote = F, sep = "\t", na="")
 ```
+#### give yourself a pat on the back
