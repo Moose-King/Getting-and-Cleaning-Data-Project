@@ -59,8 +59,10 @@ colnames(oneData) <- c("Subject","Activity", features[,2])
 
 ## making activities and subjects into factors we can work with
 oneData$Activity <- factor(oneData$Activity, levels = activityLabels[,1], labels = activityLabels[,2])
-Activity <- oneData$Activity
 oneData$Subject <- as.factor(oneData$Subject)
+
+## I remembered these steps were unnecessary but decided to leave them anyway. You can ignore them.
+Activity <- oneData$Activity
 Subject <- oneData$Subject
 
 ## creating an independent tidy data set with averages of each variable for each subject
