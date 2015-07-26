@@ -27,92 +27,92 @@ c. The dataset was randomly partitioned into two sets, where 70% of subjects wer
 
 d. the **("features")** measured in this data set (feel free to check out what each one corresponds to by following the link to the original data set) where: 
 
-tBodyAccMeanX
-tBodyAccMeanY	
-tBodyAccMeanZ	
-tBodyAccStdX
-tBodyAccStdY
-tBodyAccStdZ	
-tGravityAccMeanX	
-tGravityAccMeanY	
-tGravityAccMeanZ	
-tGravityAccStdX	
-tGravityAccStdY	
-tGravityAccStdZ	
-tBodyAccJerkMeanX	
-tBodyAccJerkMeanY	
-tBodyAccJerkMeanZ	
-tBodyAccJerkStdX	
-tBodyAccJerkStdY	
-tBodyAccJerkStdZ	
-tBodyGyroMeanX	
-tBodyGyroMeanY	
-tBodyGyroMeanZ	
-tBodyGyroStdX	
-tBodyGyroStdY	
-tBodyGyroStdZ	
-tBodyGyroJerkMeanX	
-tBodyGyroJerkMeanY	
-tBodyGyroJerkMeanZ	
-tBodyGyroJerkStdX	
-tBodyGyroJerkStdY	
-tBodyGyroJerkStdZ	
-tBodyAccMagMean	
-tBodyAccMagStd	
-tGravityAccMagMean	
-tGravityAccMagStd	
-tBodyAccJerkMagMean	
-tBodyAccJerkMagStd	
-tBodyGyroMagMean	
-tBodyGyroMagStd	
-tBodyGyroJerkMagMean	
-tBodyGyroJerkMagStd	
-fBodyAccMeanX	
-fBodyAccMeanY	
-fBodyAccMeanZ	
-fBodyAccStdX	
-fBodyAccStdY	
-fBodyAccStdZ	
-fBodyAccMeanFreqX	
-fBodyAccMeanFreqY	
-fBodyAccMeanFreqZ	
-fBodyAccJerkMeanX	
-fBodyAccJerkMeanY	
-fBodyAccJerkMeanZ	
-fBodyAccJerkStdX	
-fBodyAccJerkStdY	
-fBodyAccJerkStdZ	
-fBodyAccJerkMeanFreqX	
-fBodyAccJerkMeanFreqY	
-fBodyAccJerkMeanFreqZ	
-fBodyGyroMeanX	
-fBodyGyroMeanY
-fBodyGyroMeanZ
-fBodyGyroStdX	
-fBodyGyroStdY
-fBodyGyroStdZ
-fBodyGyroMeanFreqX
-fBodyGyroMeanFreqY
-fBodyGyroMeanFreqZ
-fBodyAccMagMean
-fBodyAccMagStd
-fBodyAccMagMeanFreq
-fBodyBodyAccJerkMagMean
-fBodyBodyAccJerkMagStd
-fBodyBodyAccJerkMagMeanFreq
-fBodyBodyGyroMagMean
-fBodyBodyGyroMagStd
-fBodyBodyGyroMagMeanFreq
-fBodyBodyGyroJerkMagMean
-fBodyBodyGyroJerkMagStd
-fBodyBodyGyroJerkMagMeanFreq
-angletBodyAccMean,gravity
-angletBodyAccJerkMean,gravityMean
-angletBodyGyroMean,gravityMean
-angletBodyGyroJerkMean,gravityMean
-angleX,gravityMean
-angleY,gravityMean
-angleZ,gravityMean
+- tBodyAccMeanX
+- tBodyAccMeanY	
+- tBodyAccMeanZ	
+- tBodyAccStdX
+- tBodyAccStdY
+- tBodyAccStdZ	
+- tGravityAccMeanX	
+- tGravityAccMeanY	
+- tGravityAccMeanZ	
+- tGravityAccStdX	
+- tGravityAccStdY	
+- tGravityAccStdZ	
+- tBodyAccJerkMeanX	
+- tBodyAccJerkMeanY	
+- tBodyAccJerkMeanZ	
+- tBodyAccJerkStdX	
+- tBodyAccJerkStdY	
+- tBodyAccJerkStdZ	
+- tBodyGyroMeanX	
+- tBodyGyroMeanY	
+- tBodyGyroMeanZ	
+- tBodyGyroStdX	
+- tBodyGyroStdY	
+- tBodyGyroStdZ	
+- tBodyGyroJerkMeanX	
+- tBodyGyroJerkMeanY	
+- tBodyGyroJerkMeanZ	
+- tBodyGyroJerkStdX	
+- tBodyGyroJerkStdY	
+- tBodyGyroJerkStdZ	
+- tBodyAccMagMean	
+- tBodyAccMagStd	
+- tGravityAccMagMean	
+- tGravityAccMagStd	
+- tBodyAccJerkMagMean	
+- tBodyAccJerkMagStd	
+- tBodyGyroMagMean	
+- tBodyGyroMagStd	
+- tBodyGyroJerkMagMean	
+- tBodyGyroJerkMagStd	
+- fBodyAccMeanX	
+- fBodyAccMeanY	
+- fBodyAccMeanZ	
+- fBodyAccStdX	
+- fBodyAccStdY	
+- fBodyAccStdZ	
+- fBodyAccMeanFreqX	
+- fBodyAccMeanFreqY	
+- fBodyAccMeanFreqZ	
+- fBodyAccJerkMeanX	
+- fBodyAccJerkMeanY	
+- fBodyAccJerkMeanZ	
+- fBodyAccJerkStdX	
+- fBodyAccJerkStdY	
+- fBodyAccJerkStdZ	
+- fBodyAccJerkMeanFreqX	
+- fBodyAccJerkMeanFreqY	
+- fBodyAccJerkMeanFreqZ	
+- fBodyGyroMeanX	
+- fBodyGyroMeanY
+- fBodyGyroMeanZ
+- fBodyGyroStdX	
+- fBodyGyroStdY
+- fBodyGyroStdZ
+- fBodyGyroMeanFreqX
+- fBodyGyroMeanFreqY
+- fBodyGyroMeanFreqZ
+- fBodyAccMagMean
+- fBodyAccMagStd
+- fBodyAccMagMeanFreq
+- fBodyBodyAccJerkMagMean
+- fBodyBodyAccJerkMagStd
+- fBodyBodyAccJerkMagMeanFreq
+- fBodyBodyGyroMagMean
+- fBodyBodyGyroMagStd
+- fBodyBodyGyroMagMeanFreq
+- fBodyBodyGyroJerkMagMean
+- fBodyBodyGyroJerkMagStd
+- fBodyBodyGyroJerkMagMeanFreq
+- angletBodyAccMean,gravity
+- angletBodyAccJerkMean,gravityMean
+- angletBodyGyroMean,gravityMean
+- angletBodyGyroJerkMean,gravityMean
+- angleX,gravityMean
+- angleY,gravityMean
+- angleZ,gravityMean
 
 - We also get the mean value **(mean())** and the standard deviation **(std())** from these features.
 - Also worth noting is that the features are normalized and bounded within[-1,1]
