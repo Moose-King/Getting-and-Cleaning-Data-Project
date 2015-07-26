@@ -74,4 +74,4 @@ write.table(oneDataMeltedMean, "tidy.txt", row.names = F, quote = F, sep = "\t")
 
  
 ## I shed a single tear of joy when I first saw my tidy.txt
-## This is where it is customary to stand up and slow clap. 
+## This is where it is now customary to stand up and slow clap. 
