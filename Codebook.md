@@ -25,7 +25,8 @@ Namely these activities were:
 
 c. The dataset was randomly partitioned into two sets, where 70% of subjects were selected for generating the **("training")** data and the remaining 30% were to generate the **("test")** data.
 
-d. the **("features")** measured in this data set (feel free to check out what each one corresponds to by following the link to the original data set) where:
+d. the **("features")** measured in this data set (feel free to check out what each one corresponds to by following the link to the original data set) where: 
+
 tBodyAccMeanX
 tBodyAccMeanY	
 tBodyAccMeanZ	
@@ -116,4 +117,4 @@ angleZ,gravityMean
 - We also get the mean value **(mean())** and the standard deviation **(std())** from these features.
 - Also worth noting is that the features are normalized and bounded within[-1,1]
 
-## If you want to know more, refer to the link taking you to the aforementioned site.
+#### If you want to know more, refer to the link taking you to the aforementioned site.
