@@ -27,8 +27,7 @@ c. The dataset was randomly partitioned into two sets, where 70% of subjects wer
 
 d. the **("features")** measured in this data set (feel free to check out what each one corresponds to by following the link to the original data set) where: 
 
-- tBodyAccMeanX
-- tBodyAccMeanY	
+- tBodyAccMeanX - tBodyAccMeanY	
 - tBodyAccMeanZ	
 - tBodyAccStdX
 - tBodyAccStdY
