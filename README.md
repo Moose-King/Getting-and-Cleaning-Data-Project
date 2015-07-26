@@ -22,7 +22,7 @@ d. Appropriately labels the data set with descriptive variable names.
 
 e. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-# Walk-through of how I collected, worked with, and cleaned this data set
+# Walk-through of how I collected, worked with, and cleaned the Samsung Galaxy S smartphone accelerometer data set
 
 ## Download the Samsung Galaxy S smartphone data for this project
 ```{r}
@@ -136,4 +136,4 @@ oneDataMeltedMean <- dcast(oneDataMelted, Subject + Activity ~ variable, mean)
 ```{r}
 write.table(oneDataMeltedMean, "tidy.txt", row.names = F, quote = F, sep = "\t", na="")
 ```
-#### give yourself a pat on the back
+#### Give yourself a pat on the back.
